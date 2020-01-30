@@ -5,7 +5,7 @@ body {
 
 }
 
-#current-weather{
+#current-weather {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -13,16 +13,62 @@ body {
     flex-direction: column;
 }
 
-#current-city{
+#current-city {
     font-size: 1.2em;
 }
-#current-temperature{
+
+#current-temperature {
     font-size: 3em;
     font-weight: bold;
 }
 
+#current-summary {
+    height: 252px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
-@import "./icons";
+#daily-weather{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 4vh;
+    .icon{
+        height: 30px;
+        width: auto;
+        background-size: 50% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 6vh;
+        
+    }
+    
+}
+.everyday-weather {
+    display: flex;
+    width: 14.2vw;
+    flex-direction: column;
+    text-align: center;
+    border-left: 1px solid #000000;
+    &:first-child{
+        border-width: 0px;
+    }
+}
 
 
+
+#search{
+    width: 100%;
+    display: flex;
+
+    #search-current{
+        
+       img{
+           height: 4vh;
+           width: auto;
+       }
+    }
+}

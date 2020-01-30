@@ -35,7 +35,56 @@ body {
   background-position: center;
 }
 
-.clear-night {
-  background-image: url("/icons/clear-night.png");
+#daily-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 4vh;
+}
+
+#daily-weather .icon {
+  height: 30px;
+  width: auto;
+  background-size: 50% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 6vh;
+}
+
+.everyday-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 14.2vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-left: 1px solid #000000;
+}
+
+.everyday-weather:first-child {
+  border-width: 0px;
+}
+
+#search {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#search #search-current img {
+  height: 4vh;
+  width: auto;
 }
 /*# sourceMappingURL=style.css.map */
