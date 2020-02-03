@@ -41,6 +41,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  bottom: 30px;
   width: 100vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -122,7 +124,7 @@ body {
 }
 
 .pac-matched {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .pac-item-query {

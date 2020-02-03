@@ -36,6 +36,9 @@ function getWeather() {
     
     //today
     const timeConverter = new Date(parsedJson.currently.time*1000);   // get real time for current location
+    console.log(parsedJson.timezone)
+    timeConverter = timeConverter.toLocaleTimeString("en-US", { timeZone: parsedJson.timezone, hour12: false });
+    console.log(timeConverter)
     let minutes = timeConverter.getMinutes();
 
     if(minutes<10)
@@ -84,16 +87,16 @@ function getWeather() {
 
 
 function initialize() {
-  var input = document.getElementById('searchTextField');
-  var autocomplete = new google.maps.places.Autocomplete(input);
+  const input = document.getElementById('searchTextField');
+  const autocomplete = new google.maps.places.Autocomplete(input);
   google.maps.event.addListener(autocomplete, 'place_changed', function () {
-      var place = autocomplete.getPlace();
+      const place = autocomplete.getPlace();
 
       latitude = place.geometry.location.lat()
-    console.log(place.name)
       longitude = place.geometry.location.lng()
       currentCity.innerHTML = place.name;
-      getWeather()
+      getWeather();
+      input.value = '';
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize); 
