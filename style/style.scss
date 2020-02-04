@@ -25,10 +25,11 @@ body {
 }
 
 #current-summary {
-    height: 252px;
+    height: 25vh;
     width: auto;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22vh auto;
 }
 
 
@@ -70,6 +71,10 @@ body {
 
     #search-current{
         height: 5vh;
+        width: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
        img{
            height: 3.5vh;
@@ -80,6 +85,8 @@ body {
            border: none;
            height: 5vh;
            background-color: #ffffff;
+           padding: 0;
+           margin: 0;
        }
     }
     #search-input{
@@ -88,10 +95,9 @@ body {
         #searchTextField{
             height: 5vh;
             font-size: 4vh;
-            width: 100%;
+            width: 95vw;
             border: 0;
             margin: 0;
-            padding: 0 2vh 0 0;         
         }
     }
 }

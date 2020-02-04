@@ -14,19 +14,21 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
   <body>
-    <div id="search">
-      <div id="search-input"><input id="searchTextField" type="text" size="50" placeholder="Enter a location" autocomplete="on" runat="server" /></div>
-      <div id="search-current"><button onclick="getLocation()"><img src="/icons/geo.png"></button></div>
-    </div>
-    <div id="current-weather">
-      <div id="current-city"></div>
-      <div id="current-time"></div>
-      <div id="current-summary"></div>
-      <div id="current-temperature"></div>
-      <div id="current-wind"></div>
-
-    </div>
-    <div id="daily-weather"></div>
+   <div id="weather">
+      <div id="search">
+          <div id="search-input"><input id="searchTextField" type="text" size="50" placeholder=" Enter a location" autocomplete="on" runat="server" /></div>
+          <div id="search-current"><button onclick="getLocation()"><img src="/icons/geo.png"></button></div>
+        </div>
+        <div id="current-weather">
+          <div id="current-city"></div>
+          <div id="current-time"></div>
+          <div id="current-summary"></div>
+          <div id="current-temperature"></div>
+          <div id="current-wind"></div>
+    
+        </div>
+        <div id="daily-weather"></div>
+   </div>
   </body>
   <script src="main.js"></script>
 

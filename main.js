@@ -35,23 +35,11 @@ function getWeather() {
 
     
     //today
-    const timeConverter = new Date(parsedJson.currently.time*1000);   // get real time for current location
-    console.log(parsedJson.timezone)
-    timeConverter = timeConverter.toLocaleTimeString("en-US", { timeZone: parsedJson.timezone, hour12: false });
-    console.log(timeConverter)
-    let minutes = timeConverter.getMinutes();
-
-    if(minutes<10)
-    {
-      minutes = '0' + minutes;
-    }
-    console.log(timeConverter.getMinutes())
-    currentTime.innerHTML = `${timeConverter.getHours()}:${minutes}`;
+    const timeConverter = new Date(parsedJson.currently.time*1000).toLocaleTimeString("en-US", { timeZone: parsedJson.timezone, hour12: false }).slice(0, -3);
+    currentTime.innerHTML = timeConverter;
     currentSummary.style.backgroundImage = `url("/icons/${parsedJson.currently.icon}.png")`;
     currentTemperature.innerHTML = `${Math.round(parsedJson.currently.temperature*2)/2} °C`;
     currentWind.innerHTML = `${Math.round(parsedJson.currently.windSpeed)} km/h`;
-    console.log(parsedJson)
-
     //daily
     let dailyWeather = parsedJson.daily.data
     dailyWeather = dailyWeather.slice(1);
