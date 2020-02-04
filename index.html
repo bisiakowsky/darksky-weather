@@ -2,35 +2,40 @@
 <!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
 <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
 <!--[if IE 8]><html class="preIE9"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-    <title>title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2NSJtpTzJfuy_pWQWs-qQAIYECzExfKU&libraries=places" type="text/javascript"></script>
+<!--[if gte IE 9]><!-->
+<html>
+<!--<![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-  </head>
-  <body>
-   <div id="weather">
-      <div id="search">
-          <div id="search-input"><input id="searchTextField" type="text" size="50" placeholder=" Enter a location" autocomplete="on" runat="server" /></div>
-          <div id="search-current"><button onclick="getLocation()"><img src="/icons/geo.png"></button></div>
-        </div>
-        <div id="current-weather">
-          <div id="current-city"></div>
-          <div id="current-time"></div>
-          <div id="current-summary"></div>
-          <div id="current-temperature"></div>
-          <div id="current-wind"></div>
-    
-        </div>
-        <div id="daily-weather"></div>
-   </div>
-  </body>
-  <script src="main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>title</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB2NSJtpTzJfuy_pWQWs-qQAIYECzExfKU&libraries=places"
+    type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+  <div id="weather">
+    <div id="search">
+      <div id="search-input"><input id="searchTextField" type="text" size="50" placeholder=" Enter a location"
+          autocomplete="on" runat="server" /></div>
+      <div id="search-current"><button onclick="getLocation()"><img src="/icons/geo.png"></button></div>
+    </div>
+    <div id="current-weather">
+      <div id="current-city"></div>
+      <div id="current-time"></div>
+      <div id="current-summary"></div>
+      <div id="current-temperature"></div>
+      <div id="current-wind"></div>
+
+    </div>
+    <div id="daily-weather"></div>
+  </div>
+</body>
+<script src="main.js"></script>
 
 </html>
-

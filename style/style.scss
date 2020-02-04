@@ -6,11 +6,7 @@ body {
     padding: 0;
 
 }
-@media (min-width: 768px) {
-    body {
-    font-size: 2.5vw;
-    }
-}
+
 
 #current-weather {
     display: flex;
@@ -38,27 +34,29 @@ body {
 }
 
 
-#daily-weather{
+#daily-weather {
     display: flex;
     position: absolute;
-    bottom: 30px;
+    bottom: 2vh;
     width: 100vw;
     flex-direction: row;
     justify-content: center;
     padding-top: 4vh;
     display: flex;
     justify-content: center;
-    .icon{
+
+    .icon {
         height: 30px;
         width: auto;
         background-size: 50% auto;
         background-repeat: no-repeat;
         background-position: center;
         height: 6vh;
-        
+
     }
-    
+
 }
+
 .everyday-weather {
     display: flex;
     width: 14.2vw;
@@ -66,41 +64,43 @@ body {
     text-align: center;
     border-left: 1px solid #000000;
     max-width: 100px;
-    &:first-child{
+
+    &:first-child {
         border-width: 0px;
     }
 }
 
 
 
-#search{
-    width: 100%;
+#search {
+    width: 100vw;
     display: flex;
 
-    #search-current{
+    #search-current {
         height: 5vh;
         width: 5vw;
         display: flex;
         align-items: center;
         justify-content: center;
 
-       img{
-           height: 3.5vh;
-           width: auto;
-       }
+        img {
+            height: 3.5vh;
+            width: auto;
+        }
 
-       button{
-           border: none;
-           height: 5vh;
-           background-color: #ffffff;
-           padding: 0;
-           margin: 0;
-       }
+        button {
+            border: none;
+            height: 5vh;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
     }
-    #search-input{
+
+    #search-input {
         display: flex;
 
-        #searchTextField{
+        #searchTextField {
             height: 5vh;
             font-size: 4vh;
             width: 95vw;
@@ -110,16 +110,54 @@ body {
     }
 }
 
-.pac-item{
+.pac-item {
     font-size: .7em;
     line-height: 2em;
     padding: 2vh 0;
 
 }
 
-.pac-matched{
+.pac-matched {
     font-size: 1.2em;
 }
-.pac-item-query{
+
+.pac-item-query {
     font-size: 1.7em;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 45px;
+    }
+
+    #daily-weather {
+        position: static;
+    }
+}
+
+@media (min-width: 1500px) {
+    #daily-weather{
+        font-size: 33px;
+    }
+ 
+}
+
+@media (min-width: 1024px) {
+    .pac-item-query{
+        font-size: 1em;
+    }
+    #search-input{
+        max-width: 1024px;
+    }
+
+    #search{
+        justify-content: center;
+    }
 }
