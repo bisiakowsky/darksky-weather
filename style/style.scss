@@ -6,6 +6,11 @@ body {
     padding: 0;
 
 }
+@media (min-width: 768px) {
+    body {
+    font-size: 2.5vw;
+    }
+}
 
 #current-weather {
     display: flex;
@@ -41,6 +46,8 @@ body {
     flex-direction: row;
     justify-content: center;
     padding-top: 4vh;
+    display: flex;
+    justify-content: center;
     .icon{
         height: 30px;
         width: auto;
@@ -58,6 +65,7 @@ body {
     flex-direction: column;
     text-align: center;
     border-left: 1px solid #000000;
+    max-width: 100px;
     &:first-child{
         border-width: 0px;
     }
